@@ -30,6 +30,8 @@ class _HomeState extends State<Home> {
     heightController.text = "";
     setState(() {
       _infoText = "Informe seus dados!";
+      // corrige o erro de não sumir as mensagem de validadção
+      _formKey = GlobalKey<FormState>();
     });
   }
 
