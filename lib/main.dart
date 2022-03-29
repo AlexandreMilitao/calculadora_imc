@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     home: Home(),
+    //Tirar banner de debug
+    debugShowCheckedModeBanner: false,
   ));
 }
 
