@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace, unused_element, implementation_imports, unnecessary_import, prefer_final_fields, unused_field
+// ignore_for_file: prefer_const_constructors, deprecated_member_use, sized_box_for_whitespace, unused_element, implementation_imports, unnecessary_import, prefer_final_fields, unused_field, avoid_print
 
 import 'package:flutter/src/material/raised_button.dart';
 import 'package:flutter/material.dart';
@@ -42,11 +42,12 @@ class _HomeState extends State<Home> {
       double weight = double.parse(weightController.text);
       double height = double.parse(heightController.text) / 100;
       double imc = weight / (height * height);
+      print(imc);
       if (imc <= 18.5) {
         _infoText = "Abaixo do PesoIMC:${imc.toStringAsPrecision(4)}";
       } else if (imc >= 18.6 && imc <= 24.9) {
         _infoText = "Peso normal IMC:${imc.toStringAsPrecision(4)}";
-      } else if (imc >= 25 && imc <= 25.9) {
+      } else if (imc >= 25 && imc <= 29.9) {
         _infoText = "Sobrepeso IMC:${imc.toStringAsPrecision(4)}";
       } else if (imc >= 30 && imc <= 34.9) {
         _infoText = "Obesidade 1 IMC:${imc.toStringAsPrecision(4)}";
